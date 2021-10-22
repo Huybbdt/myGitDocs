@@ -1,0 +1,71 @@
+git clone <link> :lay du lieu ve copy nguyen ban ve may
+git init : khi tao thu muc moi va thu muc moi dc tao ra
+git status : kiem tra trang thai cua file
+git add <fileName> / .  : them  su thay doi vao git
+git commit -m "nhung thay doi": dong goi va dat ten cho su thay doi
+git log : cho xem lich su da commit 
+git show <idcommit> : xem duoc nhung thay doi trong file
+git diff : xem nhung thay doi  truoc khi add . 
+
+git restore <filename> / git checkout --<filename> : bo file ra ngoai working directory chua len staging area va  tro ve luc chua thay doi
+
+git restore --staged <filename> / git reset <filename> : 
+bo file da dc add tu staging area xuong working directory
+
+git reset --soft <idcommit> : dang o staging area (da add chua commmit)
+git reset --mixed <idcommit> :  tro ve working directory (chua add)	
+git reset --hard <idcommit> : xoa all giu lai file
+luu y: khi dung reset 1 commit o giua thi nhung commit o phia truoc no se mat
+
+git revert <idcommit> : tao ra 1 commit moi revert lai commit cu ( co ve truoc khi commit)
+
+.gitignore : nen ignore truoc khi commit , tao  ra 1 files va trong context dien noi dung muon ngoai tru
+
+working directory: la thu muc lam viec noi chua nhung thay doi (chua add )
+staging area : khi add cac file o working directory se  vao staging area cho commit (da add chua commit)
+git repository : luu nhung thay doi cua commit ( da commit)
+
+
+Branching & Merging
+git checkout -b <branchName>: vua checkou va tao 1 nhanh moi
+git switch / checkout <branchName> : chuyen qua nhanh branch
+git branch <branchName> : tao 1 branch
+git branch -D <branchName> : xoa 1 branch
+
+git merge B->A
+b1: git checkout <brandName A>
+b2: git merge <brandName B>
+ 
+
+dua len github
+B1: tao folder tren git
+B2: teminal -> git remove add origin <linkgithub>
+b3: git push -u origin master 
+
+git push: sau khi thay doi dua lai len git
+git pull: tai nhung thay doi tu git ve
+git push origin <branchName> : dua code len branch
+test tren local: git remote -v
+git fetch origin <branchName> : dua brand tren github ve  va co the check out
+
+
+git config --global credential.helper store : luu mat khau git mai tren in /.git-credentials
+git config --global credential.hel[er "cache --timeout=18000" : luu vao ram 5 tieng khi tat may se mat
+
+
+yeu cau
+khac nhau git merge va gitrebase
+ B(123.4.7)->A(123.5.6)
+git merge :  gop nhanh theo thu tu thoi gian cac commit neu xay ra sung dot no se gop thanh 1 new commit
+=> 123.4.5.6.7.8 (8 1 commit chung neu co sung dot)
+git rebase : toan bo commit B nhanh thanh cac commit base cua nhanh A va nhung commit cua a#b thi se dc dua vao sau cung
+neu co sung dot tai commit ( thi 1 trong nhung commit cua a se phai thay doi)
+=>123.4.7.5.6 (vd: 7 & 5 sung dot thi 5 se dc commit thanh 5')
+git cherry-pick <idcommit>: dung khi muon lay 1 hoac nhieu commit tu  1 branch A sang brach B , xay ra khi dang phat trien song song 1 du an ma 1 nguoi can lay 1 source cua 1 nguoi khac de phat trien tinh nang cua minh
+git cherry-pick <idcommit1>..<idcommit3> : commit1 and commit3
+git cherry-pick <idcommit1>^..<idcommit3> : comit1->commit3
+
+
+SSH:
+ssh-keygen -t rsa -f id_rsa
+

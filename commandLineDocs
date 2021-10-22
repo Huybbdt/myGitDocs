@@ -1,0 +1,109 @@
+mkdir <fileName> / <fileName>{1..4} / - p <filename/filename> : 1 tao directory / tao 4 dir 1..4
+touch : tao file
+pwd : xem dang o dau
+cd : di chuyen 
+vi : nhap lieu
+cat : xem du lieu (cat -b de hien thi so dong)
+less: de xem nhieu trang
+ ( ctrl b de tro ve , ctrl f de xe trang tiep theo , G dau file , shift g cuoi file , q de thoat)
+ls / ls -l: xem thong tin noi lam viec
+head -n : ( n la so dong ) xem noi dung n dong dau
+tail -n : xem noi dung n dong cuoi
+mv : di chuyen
+rm -r 	: xoa 
+mv : doi ten file
+cp -r <fileName cu> <newFileName> : coppy
+nano  : xem va sua doi file
+find . -name "*.js" : tim tat ca file co duoi js
+grep "version" index.js : tim nhung cho co "version trong file index.js
+passwd : de doi pass
+whoami : who am  i ?
+users / who /w : who is logged in?
+halt : tam dung
+init 0 :  dong bo va don dep truoc khi shutting down
+init 6 :  reboots the system  by shutting down and restart it
+poweroff : tat may by tat  nang luong
+reboot :  khoi dong lai may
+shuttdown : tat he thong
+wc filename :  xem so dong, so tu , so byts , file name
+
+----
+
+sudo useradd <userName> : tao user moi
+usermod : sua user
+userdel : xoa user
+groupadd : tao nhom
+groupmod : sua nhom
+groupdel : xoa nhom
+uname -a : hien thi thong tin kernel
+cd /
+cat etc/passwd : vao check user da dc tao
+
+
+---- Process
+ps -aux
+ps -a 
+top 
+kill -9 6738 : xoa 9 process sao process id 6738
+--
+folder bin : chua cau lenh ubuntu
+folder sbin : lenh de quan ly he dieu hanh
+folder boot : thu vien can thiet khoi dong cua he thong
+folder etc : file cau hinh
+
+var folder var : chua nhung thong tin lock cua system
+
+path : khong tinh tu root goi la path tuong doi , tu root la tuyet doi
+history: liet ke cac dong lenh trong qua khu
+!!: chay len ngay phia truoc vua chay
+!-number: chay len tu duoi tro len vi tri thu number
+!$: gan grams cua len phia truoc vao
+!pw : chay lenh gan nhat ma bat dau bang pw
+!pw:p : in ra cau len gan nhat ma bat dau bang pw
+ln -s <link> <variableName> : tao ra 1 symbolic link
+unlink <variableName> : xoa symbolic link
+
+
+PERMISSION: 
+d rwx     rwx       r-x 4      quanghuy quanghuy 4096 date  clone
+- rw-     rw-       r-- 1      quanghuy quanghuy 1701 date conmand
+  u(user) g(group) o(other) user      group   size date 
+r: read
+w: write
+x: execute
+s: set User and Group ID	
+rwx: 421
+
+chmod g+x <fileOrDirName> : them quyen x vao group
+chmod a-X <fileOrDirName> : xoa quyen x ra all
+chown : thay doi user
+chgrp : thay doi group
+cut -d':' -f 1 : cat va chia cac line thanh cac cot dieu kien ':' va in ra dong dau
+sh / bash <filename>: doc file 
+
+
+-eq : a  ==b
+-ne : a != b
+-gt : a > b
+-lt : a < b
+-ge : a >=b
+-le : a <=b
+
+
+if [$a -eq $b]; then
+	echo "a = b"
+else 
+	echo "a != b"
+fi
+
+for i in `seq 1 10`
+do
+	echo $i
+done	
+while [$i < 10]; do
+	echo $i
+	i = $((i+1)) 
+done
+
+
+
