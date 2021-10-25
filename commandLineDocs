@@ -1,5 +1,5 @@
-mkdir <fileName> / <fileName>{1..4} / - p <filename/filename> : 1 tao directory / tao 4 dir 1..4
-touch : tao file
+mkdir <fileName> / <fileName>{1..4} / - p <filename/filename> : 1 tạo directory / tạo 4 dir 1..4
+touch : tạo file
 pwd : xem dang o dau
 cd : di chuyen 
 vi : nhap lieu
@@ -63,7 +63,7 @@ history: liet ke cac dong lenh trong qua khu
 ln -s <link> <variableName> : tao ra 1 symbolic link
 unlink <variableName> : xoa symbolic link
 
-
+-----------------
 PERMISSION: 
 d rwx     rwx       r-x 4      quanghuy quanghuy 4096 date  clone
 - rw-     rw-       r-- 1      quanghuy quanghuy 1701 date conmand
@@ -72,12 +72,14 @@ r: read
 w: write
 x: execute
 s: set User and Group ID	
+
 rwx: 421
 
 chmod g+x <fileOrDirName> : them quyen x vao group
 chmod a-X <fileOrDirName> : xoa quyen x ra all
 chown : thay doi user
 chgrp : thay doi group
+------------------------------------------
 cut -d':' -f 1 : cat va chia cac line thanh cac cot dieu kien ':' va in ra dong dau
 sh / bash <filename>: doc file 
 
